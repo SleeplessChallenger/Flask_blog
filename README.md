@@ -26,6 +26,8 @@ you should bear in mind a couple of features:
 	fine-tune 'environmental variables' otherwise you will
 	see flow of errors. 
 	Don't familiar with them? Check this video: https://youtu.be/5iWhQWVXosU
+	
+	<div>
 
 	Which variables in particular? Well, you can look them in config.py
 	+ I'll try to describe how to install them below.
@@ -59,6 +61,8 @@ you should bear in mind a couple of features:
 		<li>Open the terminal</li>
 		<li>Run: pip install -r requirements.txt</li>
 		</ol>
+	
+	</div>
 
 
 <h2>What does project do</h2>
