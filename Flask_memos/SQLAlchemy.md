@@ -7,7 +7,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
 db = SQLAlchemy(app)`
 
 CLI:
-`
+```bash
 from start import db
 db.create_all()
 from start import User, Post
@@ -41,7 +41,8 @@ post.user_id
 # next we'll see how backref helps us:
 post.author => User('Daniil', 'cd@gmail.com', 'default.jpg')
 
-db.drop_all()`
+db.drop_all()
+```
 
 2. due to `backref='author'` we can use: `post.author.username` (home.html)
 
