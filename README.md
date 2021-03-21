@@ -78,7 +78,7 @@ Superficially delineating the project:
 7) `users` is the most dense one which handles all the features pertinent to user (partially desribed in the beginning)
 8) `posts` is the ones that enables creation of post/deletion/tweaking etc
 9) `weather & calendar` are folders that enable ability to see weather and observe my Google calendar
-10) `errors` is folder that will make customs errors instead of basic Flask ones
+10) `errors` is folder that will make custom errors instead of basic Flask ones
 11) `api` is my ability to concoct API background, but stumbled upon a couple of issues
 
 
