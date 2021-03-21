@@ -147,7 +147,7 @@ Flask migrate is a little bit difficult to comprehend. Firstly, you can watch vi
 Last note: below you can observe the tree (aka strucutre) of the project
 tree of the project
 
-<article>
+```bash
 .
 ├── Temp_Readme.txt
 ├── blog
@@ -269,4 +269,4 @@ tree of the project
 │       └── weather.py
 ├── requirements.txt
 └── run.py
-</article>
+```
