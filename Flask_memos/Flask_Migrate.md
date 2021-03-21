@@ -8,6 +8,7 @@ Generally migration helps to make tweaks to database and keep various versions o
 	migrate = Migrate(app, db)`
 
 <h5>If you have project already, but don't have `migration`</h5>:
+
 1. Go to directory where `__init__.py` (blog folder)
 
 2. `export FLASK_APP=__init__.py`
