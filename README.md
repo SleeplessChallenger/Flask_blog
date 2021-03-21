@@ -119,16 +119,16 @@ Bootstrap:
 And of course: https://stackoverflow.com
 
 <h3>Issues that I cannot solve</h3>
-1) Although I implemented the feature where you can Follow/Unfollow another users and
+1. Although I implemented the feature where you can Follow/Unfollow another users and
    display hinges on `current_user` and `another user`. But didn't show in particular `followers/followed` as got trapped into `many-to-many` relationship issues.
 
    !! You can see my attempt to construct and fathom <i>many-to-many</i> in  `Flask memos` folder, `many-to-many` file.
 
-2) Barring the fact I tried to create API, it doesn't show as, firstly, there are particular problems which were uncovered by `HTTPie`. Secondly, I'm in development mode hence all the features are difficult to test.
+2. Barring the fact I tried to create API, it doesn't show as, firstly, there are particular problems which were uncovered by `HTTPie`. Secondly, I'm in development mode hence all the features are difficult to test.
 
-3) By and large, I tried to make linux server from scratch, there were errors that were above me to solve. I put some memos about it in `Flask memos`
+3. By and large, I tried to make linux server from scratch, there were errors that were above me to solve. I put some memos about it in `Flask memos`
 
-4) In regard to hashing password I had 2 main options: Bcrypt and Werkzeug.
+4. In regard to hashing password I had 2 main options: Bcrypt and Werkzeug.
    The former was chosen as latter had some puzzles. Speaking about avatars: I used PIL, but Gravatar is lso an option
 
 <h4>A little bit more about Flask migrate</h4>
