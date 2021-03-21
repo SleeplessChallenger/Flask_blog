@@ -25,7 +25,7 @@ You are welcome to use my project, but for smooth operation
 you should bear in mind a couple of features:
 	fine-tune 'environmental variables' otherwise you will
 	see flow of errors. 
-	Don't familiar with them? Check this video: https://youtu.be/5iWhQWVXosU
+	Don't familiar with them? Check this video: <a href="https://youtu.be/5iWhQWVXosU">Click</a> 
 	
 	<div>
 
@@ -133,7 +133,7 @@ And of course: https://stackoverflow.com
 
 <h4>A little bit more about Flask migrate</h4>
 Flask migrate is a little bit difficult to comprehend. Firstly, you can watch video of the creator:
-https://youtu.be/IxCBjUapkWk
+<a href="https://youtu.be/IxCBjUapkWk">Click</a> 
 
 	-If you still have question, then you can follow `Flask memos` folder and there find 
 	 `Flask migrate` file to read
@@ -147,6 +147,7 @@ https://youtu.be/IxCBjUapkWk
 Last note: below you can observe the tree (aka strucutre) of the project
 tree of the project
 
+<article>
 .
 ├── Temp_Readme.txt
 ├── blog
@@ -268,3 +269,4 @@ tree of the project
 │       └── weather.py
 ├── requirements.txt
 └── run.py
+</article>
