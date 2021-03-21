@@ -10,7 +10,7 @@ It encapsulates blog with ability to
 <li>User's ability to alter their account and even pinpoint their location or erase their account</li>
 <li>Weather feature to see it in various cities</li>
 <li>Also it has migration which gives an option to save various version of your database</li>
-<li>Users can write comments which can be written in raw MarkDown</li>
+<li>Users can write posts which can be written in raw MarkDown</li>
 <li>Tried as well to create logging feature that will log slow queries</li>
 <li>Et Cetera options</li>
 </ul>
