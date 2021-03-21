@@ -1,0 +1,220 @@
+body {
+  background: #533B4D;
+  color: #C1ABA6;
+  margin-top: 5rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: black;
+}
+
+
+.bg-steel {
+  background-color: #C7B8EA;
+}
+
+
+.site-header .navbar-nav .nav-link {
+  color: #444444;
+}
+
+.site-header .navbar-nav .nav-link:hover {
+  color: red;
+}
+
+.site-header .navbar-nav .nav-link.active {
+  font-weight: 500;
+}
+
+.content-section {
+  background: #ffffff;
+  padding: 10px 20px;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  margin-bottom: 20px;
+}
+
+.article-title {
+  color: #444444;
+  text-decoration: none;
+}
+
+a.article-title:hover {
+  color: #428bca;
+  text-decoration: none;
+}
+
+.article-content {
+  white-space: pre-line;
+}
+
+.article-img {
+  height: 65px;
+  width: 65px;
+  margin-right: 16px;
+}
+
+.article-metadata {
+  padding-bottom: 1px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid #e3e3e3
+}
+
+.article-metadata a:hover {
+  color: #333;
+  text-decoration: none;
+}
+
+.article-svg {
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
+}
+
+.account-img {
+  height: 125px;
+  width: 125px;
+  margin-right: 20px;
+  margin-bottom: 16px;
+}
+
+.account-heading {
+  font-size: 2.5rem;
+}
+
+
+/*registration*/
+/*body{
+    background-color: #73A6AD;
+}*/
+.centered-form{
+  margin-top: 60px;
+}
+
+.centered-form .panel{
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: rgba(0, 0, 0, 0.3) 20px 20px 20px;
+}
+
+.new {
+  color: orange;
+}
+
+.new a {
+  text-decoration: none;
+  color: white;
+}
+
+.new a:hover {
+  color: blue;
+}
+
+
+/*login*/
+
+#pass {
+  margin-top: 1rem;
+}
+
+.login-wrap{
+  width: 100%;
+  margin:auto;
+  max-width:510px;
+  min-height:510px;
+  position:relative;
+  background:url(https://maxcdn.icons8.com/app/uploads/2016/03/material-1-1000x563.jpg) no-repeat center;
+  background-size: cover;
+  box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
+}
+.login-html{
+  width:100%;
+  height:100%;
+  position:absolute;
+  padding:90px 70px 50px 70px;
+  background:rgba(0,0,0,0.5);
+}
+
+.form-check {
+  margin: 2rem;
+}
+
+a {
+  text-decoration: none;
+  color: orange;
+}
+
+/*weather_main_page*/
+#weth h2 {
+    font-family: 'Lato', sans-serif;
+    font-size: 59px;
+    padding-left: 20px;
+    background-color: #FAE3C6;
+    border-radius: 2rem;
+}
+
+img {
+    margin: 2rem;
+    border: solid black;
+    border-radius: 3 rem;
+    border-radius: 20%;
+}
+
+#weatherForm {
+    font-family: 'Lato', sans-serif;
+    font-size: 24px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+#weatherInput {
+    font-family: 'Lato', sans-serif;
+    font-size: 24px;
+}
+
+#weatherSubmit {
+    font-family: 'Lato', sans-serif;
+    font-size: 24px;
+    color: white;
+    background-color: salmon;
+    padding: 5px 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+#weatherSubmit:hover {
+    cursor: pointer;
+    color: black;
+    background-color: #E7ECEF;
+}
+
+/*weather_results*/
+#weatherResults {
+    background-color: #fa8072;
+    font-family: 'Lato', sans-serif;
+    font-size: 24px;
+    padding: 20px;
+    display: inline-block;
+    text-align: center;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+/*calendar*/
+
+.calendar {
+    position: relative; 
+    padding-bottom: 75%; 
+    height: 0; 
+    overflow: hidden;
+}
+ 
+.calendar iframe {
+    position: absolute;
+    top:0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%;
+}
+
+
