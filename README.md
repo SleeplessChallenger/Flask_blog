@@ -23,7 +23,7 @@ It encapsulates blog with ability to
 
 You are welcome to use my project, but for smooth operation
 you should bear in mind a couple of features:
-	-fine-tune 'environmental variables' otherwise you will
+	fine-tune 'environmental variables' otherwise you will
 	see flow of errors. 
 	Don't familiar with them? Check this video: https://youtu.be/5iWhQWVXosU
 
