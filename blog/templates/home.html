@@ -1,0 +1,42 @@
+{% extends 'layout.html' %}
+{% block content %}
+
+{{ super() }}
+{{ pagedown.include_pagedown() }} 
+
+  {% for post in posts.items %} <!-- .items is added as 'posts' is a pagination object-->
+    <article class="media content-section">
+        <img class='rounded-circle article-img' src="{{ url_for('static', filename='pics/' + post.author.image_file) }}">
+        <!--rounded-circle is bootstrap and article-img is in .css-->
+          <div class="media-body">
+            <div class="article-metadata">
+              <a class="mr-2" href="{{ url_for('users.user_posts', username=post.author.username) }}">{{ post.author.username }}</a> 
+              <!--to display only username instead of
+                  User: qwerty, qwerty@mail.com, 9bc745e670b53437.JPG-->
+              <small class="text-muted">{{ post.date_posted.strftime('%Y-%m-%d') }}</small>
+            </div>
+            <h2><a class="article-title" href="{{ url_for('posts.post', post_id=post.id) }}">{{ post.title }}</a></h2>
+            <p class="article-content">{% if post.body_html %}
+                    {{ post.body_html | safe }}
+                {% else %}
+                    {{ post.content }}
+                {% endif %}
+
+            <!-- {{ post.content }} --></p>
+          </div>
+        </article>
+  {% endfor %}
+
+  {% for page in posts.iter_pages(left_edge=1, right_edge=1, left_current=1, right_current=2) %}
+    {% if page %}
+      {% if posts.page == page %} <!-- to dye the current page-->
+      <!-- posts.page received from 'routes' -->
+      <a class='btn btn-info mb-4' href="{{ url_for('main.home', page=page) }}">{{ page }}</a>
+      {% else %}
+      <a class='btn btn-outline-info mb-4' href="{{ url_for('main.home', page=page) }}">{{ page }}</a>
+     {% endif %} 
+    {% else %}
+      ...
+    {% endif %}
+  {% endfor %}
+{% endblock content %}

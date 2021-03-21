@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+{% block content %}
+
+	<body id='weth'>
+
+		<h2>Weather</h2>
+
+		<img src="https://images.unsplash.com/photo-1606485362350-8b96197c2d57?ixid=MXwxMjA3fDB8MHxzZWFyY2h8OXx8amFwYW5lc2UlMjBjb3VudHJ5c2lkZXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60">
+
+		<form id="weatherForm" action="{{ url_for('weather.city_input') }}" method="post">
+		    City: <input id="weatherInput" type="text" name="city_name" placeholder="Input the city name"><br>
+		    <input id="weatherSubmit" type="submit" value="Submit">
+		</form>
+
+	</body>
+
+{% endblock content %}

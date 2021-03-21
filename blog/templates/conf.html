@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+{% block content %}
+<div class="container warning">
+    <div class="row">
+		<h1 class="col-md-1"><span class="glyphicon glyphicon-exclamation-sign"></span></h1>
+        <h4 class="col-md-10">Warning: Please, confirm your account before using the blog</h4>
+	</div>
+	<div>
+		<ul>
+			<p>Lost our email and need to resend it?</p>
+			<li>Click here to resend: <a href="{{ url_for('users.resend_conf') }}">link</a></li>
+		</ul>
+	</div>
+</div>
+{% endblock content %}

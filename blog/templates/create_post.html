@@ -1,0 +1,50 @@
+{% extends 'layout.html' %}
+{% block content %}
+
+{{ super() }}
+{{ pagedown.include_pagedown() }}
+
+	<div class="col-md-10 blogShort">
+		<form method="POST" action="">
+			{{ form.hidden_tag() }}
+			<legend class="border-bottom mb-4">{{ legend }}</legend> <br>
+			<hr>
+	       	<h1>
+	       		<div class='new_post' class='form-group'>
+		       		{{ form.title.label(class='form-control-label') }}
+		       		{% if form.title.errors %}
+		       			{{ form.title(class='form-control form-control-lg is-invalid') }}
+		       			<div class='invalid-feedback'>
+		       				{% for error in form.title.errors %}
+		       					<span>{{ error }}</span>
+		       				{% endfor %}
+		       			</div>
+		       		{% else %}
+		       			{{ form.title(class="form-control form-control-lg") }}
+		       		{% endif %}
+	       		</div>
+	       	</h1>
+	        <img class='new_img' src="https://images.unsplash.com/photo-1615217482071-3ca1bacfeaaa?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzM3x8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60" alt="post img" class="pull-left img-responsive postImg img-thumbnail margin10">
+	        <article>
+		     	<div class='new_post' class='form-group'>
+		     		{{ form.content.label(class='form-control-label') }}
+		     		{% if form.content.errors %}
+		     			{{ form.content(class='form-control form-control-lg is-invalid') }}
+		     			<div class='invalid-feedback'>
+		     				{% for error in form.content.errors %}
+		     					<span>{{ error }}</span>
+		     				{% endfor %}
+		     			</div>
+		     		{% else %}
+		     			{{ form.content(class='form-control form-control-lg') }}
+		     		{% endif %}
+		        </div>
+	        </article>
+	        <br>
+	        <div class='form-group'>
+	        	{{ form.submit(class='btn btn-outline-info') }}
+	        </div>  
+	        <br>
+	    </form>     
+  	</div>
+{% endblock content %}

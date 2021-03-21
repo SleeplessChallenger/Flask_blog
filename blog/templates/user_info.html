@@ -1,0 +1,111 @@
+{% extends 'layout.html' %}
+{% block content %}
+
+
+<div class="content-section">
+      <div class="media">
+        <img class="rounded-circle account-img" src="{{ url_for('static', filename='pics/' + user.image_file) }}">
+        <div class="media-body">
+          <h2 class="account-heading">{{ user.username }}</h2>
+          <p class="text-secondary">{{ user.email }}</p>
+        </div>
+      </div>
+
+      {% if current_user.username == user.username %}
+      <!-- if user opens his/her page then it can be modified, otherwise just
+      	   observe and and do actions related to following -->
+
+        <form method="POST" action="" enctype="multipart/form-data">
+            {{ form.hidden_tag() }}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Account Info</legend>
+                <div class="form-group">
+                    {{ form.username.label(class="form-control-label") }}
+
+                    {% if form.username.errors %}
+                        {{ form.username(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.username.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.username(class="form-control form-control-lg") }}
+                    {% endif %} <br> 
+                </div>
+
+                <div class="form-group">
+
+                    {{ form.country.label(class="form-control-label") }} <span><a href="http://maps.google.com/?q={{ current_user.country }}">Click to see on the map!</a></span>
+                    {% if form.country.errors %}
+                        {{ form.country(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.country.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.country(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+
+                <div class="form-group">
+                    {{ form.email.label(class="form-control-label") }}
+                    {% if form.email.errors %}
+                        {{ form.email(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.email.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.email(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    {{ form.pic.label() }}
+                    {{ form.pic(class="form-control-file") }}
+                    {% if form.pic.errors %}
+                        {% for error in form.pic.errors %}
+                            <span class="text-danger">{{ error }}</span></br>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+            </fieldset>
+            <div class="form-group">
+                {{ form.submit(class="btn btn-outline-info") }}
+            </div>
+        </form>
+
+
+
+        {% else %}
+        	<article>
+            
+                <legend class="border-bottom mb-4">Account Info</legend>
+                <div>
+                	<ul>
+                		{% if not current_user.is_following(user) %}
+                			<li><a href="{{ url_for('users.follow', username=user.username) }}" class="btn btn-primary">Follow</a></li>
+                		{% else%}
+                			<li><a href="{{ url_for('users.unfollow', username=user.username) }}" class="btn btn-primary">Unfollow</a></li>
+                		{% endif %}
+
+                		<li>{{ user.country }} <span><a href="http://maps.google.com/?q={{ user.country }}">Click to see on the map!</a></span></li>
+
+                		<a href="{{ url_for('users.followers', username=user.username) }}">Followers: <span class='badge'>{{ user.followers.count() }}</span></a>
+
+                		<a href="{{ url_for('users.followed_by', username=user.username) }}">Following: <span class='badge'>{{ user.followed.count() }}</span></a>
+
+
+
+                	</ul>
+                </div>
+       
+        	</article>
+        {% endif %}
+    </div>
+{% endblock content %}
+
+
+
