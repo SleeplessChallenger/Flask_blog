@@ -14,3 +14,17 @@ class Config:
 	# auery performance in the production
 	SQLALCHEMY_RECORD_QUERIES = True
 	FLASKY_SLOW_DB_QUERY_TIME = 0.5
+
+	
+class TestDB:
+	TESTING = True
+	WTF_CSRF_ENABLED = False
+	SQLALCHEMY_DATABASE_URI = os.environ.get('SQLALCHEMY_TEST_DB_URI')
+	SQLALCHEMY_TRACK_MODIFICATIONS = False
+	SECRET_KEY = os.environ.get('SECRET_KEY')
+
+
+config = {
+	'production': Config,
+	'testDB': TestDB
+}
