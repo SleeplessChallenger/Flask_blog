@@ -3,7 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_bcrypt import Bcrypt
 from flask_login import LoginManager
 from flask_mail import Mail
-from blog.config import Config
+from blog.config import config
 from flask_migrate import Migrate
 from flask_pagedown import PageDown
 
@@ -25,9 +25,9 @@ pagedown = PageDown()
 
 
 
-def create_app(config_class=Config):
+def create_app(config_class=config['production']):
 	app = Flask(__name__)
-	app.config.from_object(Config)
+	app.config.from_object(config_class)
 	# instead of app.config['MAIL_PORT'] etc stuff
 
 	db.init_app(app)
