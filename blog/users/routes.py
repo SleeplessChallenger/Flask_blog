@@ -82,7 +82,7 @@ def login():
 		flash('Something went wrong. Check your credetentials.', 'danger')
 	return render_template('login.html', title='Login', form=form)
 
-@users.route('/logout')
+@users.route('/logout', methods=['POST'])
 def logout():
 	logout_user()
 	flash('You are now logged out')
