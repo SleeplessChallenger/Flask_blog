@@ -27,7 +27,6 @@ you should bear in mind a couple of features:
 	see flow of errors. 
 	Don't familiar with them? Check this video: <a href="https://youtu.be/5iWhQWVXosU">Click</a> 
 	
-	<div>
 
 	Which variables in particular? Well, you can look them in config.py
 	+ I'll try to describe how to install them below.
@@ -61,8 +60,6 @@ you should bear in mind a couple of features:
 		<li>Open the terminal</li>
 		<li>Run: pip install -r requirements.txt</li>
 		</ol>
-	
-	</div>
 
 
 <h2>What does project do</h2>
