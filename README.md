@@ -158,66 +158,32 @@ tree of the project
 │   └── SQLAlchemy.txt
 ├── blog
 │   ├── __init__.py
-│   ├── __pycache__
-│   │   ├── __init__.cpython-37.pyc
-│   │   ├── config.cpython-37.pyc
-│   │   ├── forms.cpython-37.pyc
-│   │   ├── models.cpython-37.pyc
-│   │   ├── routes.cpython-37.pyc
-│   │   └── validation_error.cpython-37.pyc
 │   ├── api
 │   │   ├── __init__.py
-│   │   ├── __pycache__
-│   │   │   ├── __init__.cpython-37.pyc
-│   │   │   ├── authentication.cpython-37.pyc
-│   │   │   ├── errors.cpython-37.pyc
-│   │   │   ├── posts.cpython-37.pyc
-│   │   │   └── users.cpython-37.pyc
 │   │   ├── authentication.py
 │   │   ├── errors.py
 │   │   ├── posts.py
 │   │   └── users.py
 │   ├── calendar
 │   │   ├── __init__.py
-│   │   ├── __pycache__
-│   │   │   ├── __init__.cpython-37.pyc
-│   │   │   └── calendar.cpython-37.pyc
 │   │   └── calendar.py
 │   ├── config.py
 │   ├── errors
 │   │   ├── __init__.py
-│   │   ├── __pycache__
-│   │   │   ├── __init__.cpython-37.pyc
-│   │   │   └── handlers.cpython-37.pyc
 │   │   └── handlers.py
 │   ├── main
 │   │   ├── __init__.py
-│   │   ├── __pycache__
-│   │   │   ├── __init__.cpython-37.pyc
-│   │   │   └── routes.cpython-37.pyc
 │   │   └── routes.py
 │   ├── migrations
 │   │   ├── README
-│   │   ├── __pycache__
-│   │   │   └── env.cpython-37.pyc
 │   │   ├── alembic.ini
 │   │   ├── env.py
 │   │   ├── script.py.mako
 │   │   └── versions
-│   │       ├── 39aabe046001_.py
-│   │       ├── 49cc2e177d5a_.py
-│   │       ├── __pycache__
-│   │       │   ├── 39aabe046001_.cpython-37.pyc
-│   │       │   ├── 49cc2e177d5a_.cpython-37.pyc
-│   │       │   └── d7ad88a61714_.cpython-37.pyc
-│   │       └── d7ad88a61714_.py
+│   │       └── d118c79ac758_.py
 │   ├── models.py
 │   ├── posts
 │   │   ├── __init__.py
-│   │   ├── __pycache__
-│   │   │   ├── __init__.cpython-37.pyc
-│   │   │   ├── forms.cpython-37.pyc
-│   │   │   └── routes.cpython-37.pyc
 │   │   ├── forms.py
 │   │   └── routes.py
 │   ├── site.db
@@ -256,23 +222,22 @@ tree of the project
 │   │   ├── user_info.html
 │   │   ├── user_posts.html
 │   │   └── weather.html
+│   ├── test.db
 │   ├── users
 │   │   ├── __init__.py
-│   │   ├── __pycache__
-│   │   │   ├── __init__.cpython-37.pyc
-│   │   │   ├── forms.cpython-37.pyc
-│   │   │   ├── routes.cpython-37.pyc
-│   │   │   └── utils.cpython-37.pyc
 │   │   ├── forms.py
 │   │   ├── routes.py
 │   │   └── utils.py
 │   ├── validation_error.py
 │   └── weather
 │       ├── __init__.py
-│       ├── __pycache__
-│       │   ├── __init__.cpython-37.pyc
-│       │   └── weather.cpython-37.pyc
 │       └── weather.py
 ├── requirements.txt
-└── run.py
+├── run.py
+└── tests
+    ├── __init__.py
+    ├── test_Post_model.py
+    ├── test_User_model.py
+    ├── test_general.py
+    └── test_routes.py
 ```
