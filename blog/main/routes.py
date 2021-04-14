@@ -2,6 +2,7 @@ from flask import (Blueprint, render_template,
 				   request, current_app)
 from blog.models import Post
 from flask_sqlalchemy import get_debug_queries
+from blog.config import config
 
 main = Blueprint('main', __name__)
 
@@ -12,7 +13,8 @@ queries issued during the request as a list
 @main.after_app_request
 def after_request(response):
 	for query in get_debug_queries():
-		if query.duration >= current_app.config['FLASKY_SLOW_DB_QUERY_TIME']:
+		if query.duration >= config.get('production').FLASKY_SLOW_DB_QUERY_TIME:
+		# if query.duration >= current_app.config['FLASKY_SLOW_DB_QUERY_TIME']:
 			current_app.logger.warning(f'Slow query: {query.statement}, {query.parameters},\
 													  {query.duration}, {query.context}')
 	return response
