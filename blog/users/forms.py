@@ -10,19 +10,19 @@ from blog.models import User
 class RegistrationForm(FlaskForm):
 
 	username = StringField('Username', 
-							validators=[DataRequired(), \
-							Length(min=5, max=15), \
-							Regexp('^[A-Za-z][A-Za-z0-9_.]*$', 0,
-               				'''Usernames must have only letters, 
-               					numbers, dots or 
-               					underscores''')])
+				validators=[DataRequired(), \
+				Length(min=5, max=15), \
+				Regexp('^[A-Za-z][A-Za-z0-9_.]*$', 0,
+               			'''Usernames must have only letters, 
+               			numbers, dots or 
+               			underscores''')])
 	email = StringField('Email',
-						 validators=[DataRequired(), Email()])
+			     validators=[DataRequired(), Email()])
 
 	password = PasswordField('Password', validators=[DataRequired()])
 	confirm_password = PasswordField('Confirm your password',
-									  validators=[DataRequired(), \
-									  EqualTo('password', message='Passwords must match')])
+					  validators=[DataRequired(), \
+					  EqualTo('password', message='Passwords must match')])
 	country = StringField('Current location')
 
 	submit = SubmitField('Sign up!')
@@ -43,10 +43,10 @@ class RegistrationForm(FlaskForm):
 class LoginForm(FlaskForm):
 
 	email = StringField('Email',
-						 validators=[DataRequired(), Email()])
+			     validators=[DataRequired(), Email()])
 
 	password = PasswordField('Password',
-							  validators=[DataRequired()])
+				  validators=[DataRequired()])
 	check = BooleanField('Tick to stay logged')
 	submit = SubmitField('login!')
 
@@ -54,14 +54,14 @@ class LoginForm(FlaskForm):
 class UpdateAccountForm(FlaskForm):
 
 	username = StringField('Username',
-							validators=[DataRequired(), Length(min=2, max=25)])
+				validators=[DataRequired(), Length(min=2, max=25)])
 	email = StringField('Email',
-						 validators=[DataRequired(), Email()])
+			     validators=[DataRequired(), Email()])
 
 	country = StringField('Current location')
 	
 	pic = FileField('Update Profile image',
-					 validators=[FileAllowed(['jpg', 'png'])])
+			 validators=[FileAllowed(['jpg', 'png'])])
 	submit = SubmitField('Update now!')
 
 	def validate_username(self, username):
@@ -80,7 +80,7 @@ class UpdateAccountForm(FlaskForm):
 class RequestResetForm(FlaskForm):
 
 	email = StringField('Email',
-						 validators=[DataRequired(), Email()])
+			     validators=[DataRequired(), Email()])
 	submit = SubmitField('Request password reset')
 
 	def validate_email(self, email):
@@ -92,8 +92,8 @@ class RequestResetForm(FlaskForm):
 class ResetPasswordForm(FlaskForm):
 
 	password = PasswordField('Password',
-							  validators=[DataRequired()])
+				  validators=[DataRequired()])
 	confirm_password = PasswordField('Confirm your new password',
-									  validators=[EqualTo('password', message='Passwords must match'), 
-									  			  DataRequired()])
+					  validators=[EqualTo('password', message='Passwords must match'), 
+						      DataRequired()])
 	submit = SubmitField('Place new password!')
