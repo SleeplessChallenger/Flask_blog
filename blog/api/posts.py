@@ -14,8 +14,8 @@ def get_post(id):
 def get_posts():
 	page = request.args.get('page', 1, type=int)
 	posts =  Post.query.paginate(page=page,
-							  	 per_page=5,
-							  	 error_out=False)
+				     per_page=5,
+				     error_out=False)
 	prev = None
 	if posts.has_prev:
 		prev = url_for('blog.api.get_posts', id=id, page=page-1)
@@ -23,11 +23,11 @@ def get_posts():
 	if posts.has_next:
 		next = url_for('blog.api.get_posts', id=id, page=page+1)
 	return jsonify({
-					'posts': [x.to_json() for x in posts.items()],
-					'prev': prev,
-					'next': next,
-					'count': posts.items().total
-					})
+			'posts': [x.to_json() for x in posts.items()],
+			'prev': prev,
+			'next': next,
+			'count': posts.items().total
+	})
 
 @api.route('/posts/', methods=['POST'])
 def new_post():
