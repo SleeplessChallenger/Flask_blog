@@ -82,7 +82,7 @@ def login():
 		flash('Something went wrong. Check your credetentials.', 'danger')
 	return render_template('login.html', title='Login', form=form)
 
-@users.route('/logout', methods=['POST'])
+@users.route('/logout', methods=['GET', 'POST'])
 def logout():
 	logout_user()
 	flash('You are now logged out')
@@ -129,7 +129,7 @@ def delete_account():
 		db.session.delete(user)
 		db.session.commit()
 		flash(f'{user.username} account has been erased!', 'info')
-		return render_template('register.html')
+		return redirect(url_for('users.register'))
 	return render_template('delete_account.html')
 
 @users.route('/follow/<string:username>')
