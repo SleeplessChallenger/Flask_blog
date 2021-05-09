@@ -52,7 +52,7 @@ with other errors returned by the API, the error response can be customized
 '''
 @auth.error_handler
 def auth_401():
-	return unauthorized('Invalid credentials')
+	return not_authorized('Invalid credentials')
 
 '''Blueprint.before_request is called before each request within the blueprint.
 If you want to call it before all blueprints, please use before_app_request.'''
