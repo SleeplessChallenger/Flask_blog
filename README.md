@@ -121,7 +121,7 @@ And of course: https://stackoverflow.com
 
    !! You can see my attempt to construct and fathom <i>many-to-many</i> in  `Flask memos` folder, `many-to-many` file.
 
-2. Barring the fact I tried to create API, it doesn't show as, firstly, there are particular problems which were uncovered by `HTTPie`. Secondly, I'm in development mode hence all the features are difficult to test.
+2. I managed to create overall skeleton for the API, but `HTTPie` refused to test it and gave some hodgepodge barrage of errors
 
 3. By and large, I tried to make linux server from scratch, there were errors that were above me to solve. I put some memos about it in `Flask memos`
 
