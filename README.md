@@ -2,6 +2,8 @@
 This project is a blog with multiple features that is built with Flask.
 Other technologies used in creation: HTML/CSS, Bootstrap, Jinja2, SQLAlchemy and a couple of others.
 
+**Update**: Deployed with Docker. You can pull it with `docker pull enoshima/flask_blog:latest`
+
 It encapsulates blog with ability to 
 <ul>
 <li>Register and login</li>
