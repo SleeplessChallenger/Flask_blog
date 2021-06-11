@@ -14,6 +14,7 @@ class Config:
 	# auery performance in the production
 	SQLALCHEMY_RECORD_QUERIES = True
 	FLASKY_SLOW_DB_QUERY_TIME = 0.5
+	SQLALCHEMY_TRACK_MODIFICATIONS = False
 
 	
 class TestDB:
