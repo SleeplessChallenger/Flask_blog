@@ -20,7 +20,7 @@ class UserTest(unittest.TestCase):
 		self.app_context.push()
 		db.create_all()
 		self.user = User(username='Haruka', email='haruka@yahoo.com',
-						 password='just some letters', image_file='Night view.png')
+				 password='just some letters', image_file='Night view.png')
 		db.session.add(self.user)
 		db.session.commit()
 
@@ -43,7 +43,7 @@ class UserTest(unittest.TestCase):
 
 	def test_token_difference(self):
 		user_test = User(username='Kobayashi', email='kobayashi@gmail.com',
-						 password='random password', image_file='Day view.jpg')
+				 password='random password', image_file='Day view.jpg')
 		db.session.add(user_test)
 		db.session.commit()
 		token1 = self.user.get_reset_token()
@@ -52,7 +52,7 @@ class UserTest(unittest.TestCase):
 
 	def test_token_from_another_user(self):
 		user_test = User(username='Kobayashi', email='kobayashi@gmail.com',
-						 password='random password', image_file='Day view.jpg')
+				 password='random password', image_file='Day view.jpg')
 		db.session.add(user_test)
 		db.session.commit()
 		token = user_test.get_reset_token()
@@ -60,7 +60,7 @@ class UserTest(unittest.TestCase):
 
 	def test_follow_unfollow_feature(self):
 		user_test = User(username='Kobayashi', email='kobayashi@gmail.com',
-				 		 password='random password', image_file='Day view.jpg')
+				 password='random password', image_file='Day view.jpg')
 		db.session.add(user_test)
 		db.session.commit()
 
@@ -78,10 +78,10 @@ class UserTest(unittest.TestCase):
 	@patch('blog.models.User.to_json')
 	def test_json(self, mock_obj):
 		mock_obj.return_value = {
-								'url': '/api/v1/users/',
-								'username': 'Haruka',
-								'posts_url': None
-							    }
+			'url': '/api/v1/users/',
+			'username': 'Haruka',
+			'posts_url': None
+			}
 		expected_keys = ['url', 'username', 'posts_url']
 		self.assertEqual(sorted(mock_obj.return_value.keys()), sorted(expected_keys))
 		self.assertEqual(sorted((self.user.to_json())), sorted(expected_keys))
