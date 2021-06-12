@@ -33,20 +33,20 @@ class RoutesClass(unittest.TestCase):
 	def test_account_actions(self):
 		# register new user
 		response = self.client.post('/register',
-									 data={
-									 'username': 'Kikuchi',
-									 'email': 'kikuchi@gmail.com',
-									 'password': '4322441414',
-									 'confirm_password': '4322441414'
-									 })
+					    data={
+					    'username': 'Kikuchi',
+					    'email': 'kikuchi@gmail.com',
+					    'password': '4322441414',
+					    'confirm_password': '4322441414'
+					    })
 		self.assertEqual(response.status_code, 302)
 
 		# login with the new user
 		response = self.client.post('/login',
-									data={
-									'email': 'kikuchi@gmail.com',
-									'password': '4322441414'
-									}, follow_redirects=True)
+					    data={
+					    'email': 'kikuchi@gmail.com',
+					    'password': '4322441414'
+					    }, follow_redirects=True)
 		self.assertEqual(response.status_code, 200)
 
 		# check token sending
